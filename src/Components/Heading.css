@@ -1,0 +1,147 @@
+@font-face {
+    font-family: "Raleway";
+    src: url("./assets/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-semibold";
+    src: url("./assets/Raleway-SemiBold.ttf");
+}
+
+.bold {
+    font-family: "Raleway-bold";
+}
+
+body {
+    font-family: "Raleway";
+    color: #fff;
+}
+
+.Heading {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.text {
+    font-size: 32pt;
+    line-height: 36pt;
+    margin: 0 0 20px 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.text::selection,
+.highlight::selection {
+    user-select: none !important;
+}
+
+.highlight {
+    color: #e31b6d;
+    font-family: "Raleway-semibold";
+}
+
+
+
+
+.button:nth-child(2) {
+    padding-right: 35px;
+}
+
+.button {
+    border: 2px solid #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13pt;
+    padding: 10px 20px;
+    transition: all 0.5s;
+    position: relative;
+
+}
+
+.button:hover {
+    background-color: #04c2c9;
+    border-color: #04c2c9;
+}
+
+.button .mdi {
+    vertical-align: middle;
+}
+
+.button:hover .mdi {
+    transform: rotate(90deg) !important;
+}
+
+.button .mdi {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    transition: transform 0.3s;
+}
+
+
+.navbar {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+    z-index: 99999999999999;
+    top: 18%;
+    left: 2%;
+    /* -webkit-transform: translate(-50%, -10%); */
+    transform: translate(-50%, 50%);
+}
+
+
+.navbar i {
+    padding: 5px 6px;
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.navbar i:hover {
+    background-color: #04c2c9;
+    border-color: #04c2c9;
+}
+
+
+
+@media screen and (max-width:900px) {
+    .navbar {
+        top: 45%;
+        left: 2%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .text {
+        font-size: 16pt;
+        line-height: 20pt;
+    }
+
+    .button {
+        display: flex;
+        align-items: center;
+        /* width: 200px; */
+        height: 42px;
+        padding: 10px 15px;
+    }
+
+    .navbar {
+        
+        top: auto;
+        left: auto;
+        bottom: 25%;
+        right: -4%;
+    }
+}
