@@ -1,0 +1,82 @@
+// contactUs_wrapper__form__small
+.contactUs {
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    background-color: var(--purple);
+
+    p {
+        font-weight: 300;
+        font-family: "Roboto", sans-serif;
+
+
+    }
+
+    &__wrapper {
+        &__form {
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            max-width: 60%;
+            margin: auto;
+
+            button {
+                margin-top: 20px;
+                width: 180px;
+                height: 50px;
+            }
+
+            @media screen and (max-width: 500px) {
+                max-width: 100%;
+            }
+
+            // width: 100%;
+            &__small {
+                width: 100%;
+                display: flex;
+                gap: 20px;
+                align-items: center;
+
+                @media screen and (max-width: 700px) {
+                    flex-direction: column;
+                }
+
+                input {
+                    width: 50%;
+                    // width: 300px;
+                    height: 50px;
+                    padding: 8px 13px;
+
+                    @media screen and (max-width: 1140px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#textarea {
+    padding: 16px;
+    width: 100%;
+    // @media screen and (max-width: 700px) {
+    //   width: 270px;
+    // }
+}
+
+.inputClean {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #141c3a;
+    border: none;
+    outline: none;
+    border: 0.5px solid #aaa;
+}
+
+.numberInput {
+    height: 50px;
+    padding: 8px 13px;
+
+    width: 100%;
+}

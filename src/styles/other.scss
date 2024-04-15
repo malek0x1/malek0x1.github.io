@@ -1,0 +1,45 @@
+@import "../components/ContactUs/styles.scss";
+
+.about-us {
+    padding: 40px 20px;
+    border-radius: 14px;
+    background-color: var(--purple);
+    color: white;
+}
+
+.navbar {
+    border-bottom: 1px solid #eeeeee44;
+
+}
+
+.projectItem--bullet {
+    position: relative;
+}
+
+.projectItem--bullet::before {
+    color: var(--purple);
+    content: "- ";
+}
+
+
+
+.image-sequence {
+    height: 100vh;
+}
+
+.margin--below--hero {
+    margin-top: 80px;
+}
+
+@media screen and (max-width:768px) {
+    // mobile
+
+    .image-sequence {
+        height: 400px;
+
+    }
+
+    .margin--below--hero {
+        margin-top: 20px;
+    }
+}
