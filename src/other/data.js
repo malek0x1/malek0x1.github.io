@@ -52,6 +52,6 @@ export const PROJECTS = [
 export const NAVBAR_DATA = [
     { id: 1, href: "#about", title: "About us" },
     { id: 2, href: "#projects", title: "Projects" },
-    { id: 3, href: "#contact", title: "Contact" },
+    { id: 3, href: "#contactus", title: "Contact" },
     { id: 4, href: "https://github.com/malek0x1", title: "Github" }
 ]

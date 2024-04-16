@@ -1,14 +1,14 @@
 
 
-import { Toaster } from "@/components/ui/sonner";
 // import { sendEmailApi } from "@/lib/fetches";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 // import { BarLoader } from "react-spinners";
-import { toast } from "sonner";
 import { z } from "zod";
 import SectionTitle from "../SectionTitle";
+import { Toaster } from "@/components/ui/sonner";
+import { toast } from "sonner";
 
 export const contactSchema = z.object({
     from_name: z.string().min(3).max(50),
@@ -42,23 +42,21 @@ const ContactUs = () => {
             setIsLoading(true)
             let emailMessage = ``
             Object.keys(data).forEach(item => emailMessage += `-${item}: ${data[item]}\n\n`)
-            console.log(emailMessage);
             if (emailMessage) {
                 // const res = await sendEmailApi(btoa(emailMessage)) //base64 it
                 setIsLoading(false)
-                toast("Success! Your submission has been received. We'll be in touch soon")
+                toast.success("Success! Your submission has been received. We'll be in touch soon")
                 form.reset()
             }
         }
     };
     return (
         <div id="contactus" className="contactUs container fix">
-            <Toaster />
+            <Toaster richColors />
             <div className="contactUs_wrapper">
                 <SectionTitle color="accent" classname="mb-8" title="Contact Me" />
                 <p className="text-white mb-8">
-                    Feel free to contact us with any questions or to learn more about our
-                    services
+                    Feel free to contact Me with any questions
                 </p>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     <div className="contactUs__wrapper__form">

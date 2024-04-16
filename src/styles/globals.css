@@ -82,11 +82,14 @@
   }
 }
 
+body,
+:root {
+  scroll-behavior: smooth;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
   background: white;
-  background-color: red;
 }
 
 .iframe-wrapper iframe {
@@ -95,7 +98,6 @@ body {
 }
 
 .mwa {
-  background-color: green;
   overflow-x: hidden;
   width: 100%;
 }

@@ -55,14 +55,14 @@ export default function Home() {
         </div>
       </div>
       <div className="flex justify-center mx-2">
-        <div className="about-us relative container max-w-3xl mt-20">
+        <div id="about" className="about-us relative container max-w-3xl mt-20">
           <SectionTitle color="accent" title="About Me" />
           <p className="text-center max-w-3xl mx-auto text-xs">
             Experienced React.js Developer with a strong background in building dynamic and responsive web applications. Skilled in implementing clean, organized code and user-centric interfaces. Proven ability to collaborate effectively with development teams to deliver high-quality solutions. Demonstrates meticulous attention to detail and a proactive approach to problem-solving. Excels in optimizing front-end performance and enhancing user experiences.
           </p>
         </div>
       </div>
-      <div className="my-20 container mx-auto">
+      <div id="projects" className="my-20 container mx-auto">
         <SectionTitle title="Featured Projects" />
         <div className="grid gap-20">
           {PROJECTS.map(item => (
