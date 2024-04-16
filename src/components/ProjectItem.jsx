@@ -22,7 +22,7 @@ const ProjectItem = ({
             <div className="flex md:items-center flex-col md:flex-row md:gap-4 gap-4">
                 <div className="flex-1 overflow-hidden">
 
-                    <VideoLoop id={image} title="title" width={"100%"} height={400} />
+                    <VideoLoop id={image} title="title" />
                 </div>
                 <div className="flex-1 p-4 grid gap-8 ">
                     <h3 className="uppercase text-2xl">{title}</h3>

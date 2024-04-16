@@ -5,21 +5,29 @@ const VideoLoop = ({ id, ...rest }) => {
     const [isShow, setIsShow] = useState(false);
 
     useEffect(() => {
-        setIsShow(true)
+        if (!isShow) {
+            setIsShow(true)
+        }
     }, [])
 
     return (
-        <div {...rest}>
+        <div {...rest} className='mwa'>
             {
-                isShow && (
+                isShow ? (
                     <ReactPlayer
                         url={`https://player.vimeo.com/video/${id}?background=1&autoplay=1&autopause=0&loop=1`}
                         loop
                         playing={true}
                         muted
+                        style={{
+                            width: "100%"
+                        }}
+                        wrapper="section"
+
 
                     />
                 )
+                    : <p>Loading...</p>
             }
 
         </div>

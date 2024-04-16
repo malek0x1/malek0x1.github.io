@@ -90,4 +90,10 @@ body {
 
 .iframe-wrapper iframe {
   width: 100%;
+
+}
+
+.mwa section {
+  max-width: 100%;
+  width: 100% !important;
 }
