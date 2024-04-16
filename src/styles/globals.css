@@ -87,3 +87,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: white;
 }
+
+.iframe-wrapper iframe {
+  width: 100%;
+}

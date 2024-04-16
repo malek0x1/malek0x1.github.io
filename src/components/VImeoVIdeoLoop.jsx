@@ -1,53 +1,27 @@
-import React, { useRef, useState, useEffect } from 'react';
-import Player from '@vimeo/player';
-import Spinner from './Spinner';
+import { useState, useEffect } from 'react';
+import ReactPlayer from "react-player";
 
-const VideoLoop = ({
-    title,
-    id,
-    width = 16,
-    height,
-    className,
-    ...rest
-}) => {
-    // if (!id) return null;
-
-    const videoRef = useRef();
-    const [iframePlayer, setIframePlayer] = useState(null);
-    const [loading, setLoading] = useState(true); // State to manage loading spinner
+const VideoLoop = ({ id, ...rest }) => {
+    const [isShow, setIsShow] = useState(false);
 
     useEffect(() => {
-        if (videoRef.current && iframePlayer === null) {
-            const player = new Player(videoRef.current);
-            setIframePlayer(player);
-
-            player.on('loaded', () => {
-                setLoading(false); // Hide loading spinner when video is loaded
-            });
-        }
-    }, [videoRef.current]);
-
-    useEffect(() => {
-        if (iframePlayer) {
-            iframePlayer.play().catch(() => { });
-        }
-    }, [iframePlayer]);
+        setIsShow(true)
+    }, [])
 
     return (
         <div {...rest}>
-            {loading && <Spinner />}
-            <iframe
-                ref={videoRef}
-                title={title}
-                src={`https://player.vimeo.com/video/${id}?background=1&autoplay=1&autopause=0&loop=1`}
-                allow="autoplay; fullscreen"
-                allowFullScreen
-                style={{
-                    display: loading ? 'none' : 'block',
-                    height: height,
-                    width: '100%',
-                }}
-            ></iframe>
+            {
+                isShow && (
+                    <ReactPlayer
+                        url={`https://player.vimeo.com/video/${id}?background=1&autoplay=1&autopause=0&loop=1`}
+                        loop
+                        playing={true}
+                        muted
+
+                    />
+                )
+            }
+
         </div>
     );
 };
