@@ -4,7 +4,7 @@ export const PROJECTS = [
         title: "Custom NextJs Ecommerce Platform",
         description: "This custom eCommerce project is a highly dynamic and customizable website built using Next.js, Sanity, Commerce.js, Tailwind CSS, and ShadCn. It empowers clients to have full control over website content and structure through the Sanity CMS, enabling them to add or modify sections, create new pages, and adjust homepage components effortlessly.",
         client: "Samia Store",
-        image: "/samia.webm",
+        image: "934909698",
         github: "https://github.com/malek0x1/ecommerce-setup",
         website: "https://samiastore.store/",
         features: [
@@ -22,7 +22,7 @@ export const PROJECTS = [
         title: "Custom ReactJs Ecommerce",
         description: "Imperfect is a modern and responsive ecommerce store built with React.js, backed by Firebase for seamless data management. This platform is designed to offer a user-friendly shopping experience across various devices and screen sizes.",
         client: "Imperfect",
-        image: "/imperfect.webm",
+        image: "934911610",
         github: "",
         website: "https://imperfectclothinglb.store/",
         features: [
@@ -37,7 +37,7 @@ export const PROJECTS = [
         title: "Custom Ecommerce Store NextJs",
         description: "This custom eCommerce website was meticulously crafted to meet specific design requirements provided by the client. Leveraging Next.js, Sanity CMS, Tailwind CSS, and custom API routes, the platform was built from scratch to ensure seamless performance and flexibility.",
         client: "The collector - associated with the owner of Jewelry of Mokarzel",
-        image: "/thecollector.webm",
+        image: "934898887",
         github: "",
         website: "https://thecollector.me/",
         features: [

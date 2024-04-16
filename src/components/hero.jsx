@@ -16,10 +16,10 @@ const Hero = () => {
                 {...animationConfig}
                 transition={{ delay: 0.01 }}
 
-                className={`sm:text-6xl text-5xl ${font.className}`}>Expert Front End Developer</motion.h3>
+                className={`sm:text-6xl text-5xl ${font.className}`}>Front End Developer</motion.h3>
             <motion.p
                 transition={{ delay: 0.2 }}
-                {...animationConfig} className="text-1xl max-w-2xl text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas natus esse, fugit blanditiis deleniti ipsa, quasi ea</motion.p>
+                {...animationConfig} className="text-1xl max-w-2xl text-center">Experienced React.js Developer crafting clean, responsive web apps with collaborative problem-solving skills.</motion.p>
             <div className="flex">
                 <motion.button
                     {...animationConfig}
