@@ -11,7 +11,7 @@ const VideoLoop = ({ id, ...rest }) => {
     }, [])
 
     return (
-        <div {...rest} className='mwa'>
+        <div {...rest} className='mwa '>
             {
                 isShow ? (
                     <ReactPlayer
@@ -19,10 +19,11 @@ const VideoLoop = ({ id, ...rest }) => {
                         loop
                         playing={true}
                         muted
-                        style={{
-                            width: "100%"
-                        }}
                         wrapper="section"
+                        width="100%"
+                        style={{
+                            maxWidth: "100%"
+                        }}
 
 
                     />

@@ -20,7 +20,7 @@ const ProjectItem = ({
             className="border-b border-b-[#eee] pb-10"
         >
             <div className="flex md:items-center flex-col md:flex-row md:gap-4 gap-4">
-                <div className="flex-1 overflow-hidden">
+                <div className="flex-1 w-full">
 
                     <VideoLoop id={image} title="title" />
                 </div>
