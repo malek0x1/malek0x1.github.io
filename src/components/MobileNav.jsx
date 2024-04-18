@@ -1,6 +1,7 @@
 import { NAVBAR_DATA } from "@/other/data"
 import { X } from "lucide-react"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 const MobileNav = ({ setIsOpen }) => {
 
@@ -20,7 +21,11 @@ const MobileNav = ({ setIsOpen }) => {
             <div className="pt-10 cursor-pointer">
                 <div className="flex flex-col gap-4 p-4 ">
                     {NAVBAR_DATA.map(item => (
-                        <div key={item.id} className="p-2 ">{item.title}</div>
+                        <div key={item.id} className="p-2 ">
+                            <Link onClick={() => { setIsOpen(false) }} href={item.href}>
+                                {item.title}
+                            </Link>
+                        </div>
                     ))}
                 </div>
             </div>

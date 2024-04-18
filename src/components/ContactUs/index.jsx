@@ -9,6 +9,8 @@ import { z } from "zod";
 import SectionTitle from "../SectionTitle";
 import { Toaster } from "@/components/ui/sonner";
 import { toast } from "sonner";
+import axios from "axios";
+import Spinner from "../Spinner";
 
 export const contactSchema = z.object({
     from_name: z.string().min(3).max(50),
@@ -43,10 +45,18 @@ const ContactUs = () => {
             let emailMessage = ``
             Object.keys(data).forEach(item => emailMessage += `-${item}: ${data[item]}\n\n`)
             if (emailMessage) {
-                // const res = await sendEmailApi(btoa(emailMessage)) //base64 it
-                setIsLoading(false)
-                toast.success("Success! Your submission has been received. We'll be in touch soon")
-                form.reset()
+                try {
+                    const res = await axios.post("/api/email-send", {
+                        message: btoa(emailMessage)
+                    })
+                    setIsLoading(false)
+                    toast.success("Success! Your submission has been received. We'll be in touch soon")
+                    form.reset()
+                } catch (e) {
+                    setIsLoading(false)
+                    toast.error("Something went wrong")
+
+                }
             }
         }
     };
@@ -82,10 +92,10 @@ const ContactUs = () => {
                                 )}
                             </div>
                         ))}
-                        <button type="submit" className='hover:opacity-80 rounded-sm bg-white text-purple-800 py-3 px-6 text-xs flex-1 sm:px-12 '>
+                        <button type="submit" className='hover:opacity-80 items-center flex rounded-sm justify-center bg-white text-purple-800 py-3 px-6 text-xs flex-1 sm:px-12 '>
                             {!isLoading ?
                                 `Submit`
-                                : "Loading..."
+                                : <Spinner />
                             }
                         </button>
 

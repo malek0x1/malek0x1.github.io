@@ -8,8 +8,6 @@
     p {
         font-weight: 300;
         font-family: "Roboto", sans-serif;
-
-
     }
 
     &__wrapper {
@@ -49,6 +47,7 @@
                     padding: 8px 13px;
 
                     @media screen and (max-width: 1140px) {
+                        height: 45px;
                         width: 100%;
                     }
                 }
