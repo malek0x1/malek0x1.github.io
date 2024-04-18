@@ -111,3 +111,16 @@ body {
   /* width: 100% !important; */
   /* max-width: 100% !important; */
 }
+
+.mobile-nav {
+  position: fixed;
+  top: 81px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  /* Adjust the blur amount as needed */
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Adjust the transparency (fourth value) */
+}

@@ -1,17 +1,14 @@
 import { NAVBAR_DATA } from "@/other/data";
-import { AlignJustify } from "lucide-react";
 import Link from "next/link";
 import MobileNav from "./MobileNav";
 import { AnimatePresence } from "framer-motion";
 import { Oswald } from "next/font/google";
+import { Sling as Hamburger } from 'hamburger-react'
 
 const font = Oswald({ subsets: ["latin"], weight: "700" });
 const Navbar = ({ isOpen, setIsOpen }) => {
 
 
-    const handleMobileNav = () => {
-        setIsOpen(prev => !prev)
-    }
     return (
         <div className=' w-full navbar'>
             <div className="flex items-center justify-between container py-4 px-5">
@@ -22,8 +19,10 @@ const Navbar = ({ isOpen, setIsOpen }) => {
 
 
                 </div>
-                <div className="" onClick={handleMobileNav}>
-                    <AlignJustify color="white" className="sm:hidden cursor-pointer" />
+                <div className="" >
+                    <div className="sm:hidden cursor-pointer" >
+                        <Hamburger toggled={isOpen} toggle={setIsOpen} color="white" />
+                    </div>
                 </div>
 
                 <AnimatePresence>
