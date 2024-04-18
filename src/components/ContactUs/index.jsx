@@ -165,6 +165,7 @@ const ContactUs = () => {
                     toast.success("Success! Your submission has been received. We'll be in touch soon");
                     reset(); // Reset form after successful submission
                 } catch (e) {
+                    console.log(e);
                     setIsLoading(false);
                     toast.error('Something went wrong');
                 }

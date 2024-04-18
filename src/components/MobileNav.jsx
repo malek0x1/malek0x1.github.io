@@ -14,7 +14,6 @@ const MobileNav = ({ setIsOpen }) => {
             className="mobile-nav"
         >
             <RemoveScroll>
-
                 <div className="pt-6 cursor-pointer">
                     <div className="flex flex-col gap-4 p-4 ">
                         {NAVBAR_DATA.map(item => (
@@ -26,7 +25,6 @@ const MobileNav = ({ setIsOpen }) => {
                         ))}
                     </div>
                 </div>
-
             </RemoveScroll>
         </motion.div>
     )
