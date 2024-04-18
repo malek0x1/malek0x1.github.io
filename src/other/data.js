@@ -8,9 +8,8 @@ export const PROJECTS = [
         github: "https://github.com/malek0x1/ecommerce-setup",
         website: "https://samiastore.store/",
         features: [
-            "fully dynamic website",
-            'Developed modular components that the client can select and configure to build any page on the website',
             "Client can dynamically change anything on the website",
+            'Developed modular components that the client can select and configure to build any page on the website',
             "Authentication Functionallity (nextauth)",
             "api routes (nextjs routes)",
             "Track Orders",
