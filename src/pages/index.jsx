@@ -10,6 +10,7 @@ import { PROJECTS } from "@/other/data";
 import SectionTitle from "@/components/SectionTitle";
 import ContactUs from "@/components/ContactUs";
 import { useState } from "react";
+import Footer from "@/components/footer";
 
 const font = Noto_Sans({ subsets: ["latin"], weight: "500" });
 
@@ -71,6 +72,7 @@ export default function Home() {
         </div>
       </div>
       <ContactUs />
+      <Footer />
     </main>
   );
 }
