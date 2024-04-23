@@ -24,8 +24,6 @@ const VideoLoop = ({ id, ...rest }) => {
                         style={{
                             maxWidth: "100%"
                         }}
-
-
                     />
                 )
                     : <p>Loading...</p>
