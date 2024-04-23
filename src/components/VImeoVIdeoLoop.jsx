@@ -15,6 +15,7 @@ const VideoLoop = ({ id, ...rest }) => {
             {
                 isShow ? (
                     <ReactPlayer
+
                         url={`https://player.vimeo.com/video/${id}?background=1&autoplay=1&autopause=0&loop=1`}
                         loop
                         playing={true}
